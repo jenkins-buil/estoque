@@ -1,0 +1,27 @@
+.post-container {
+    
+    font-size: 22px;
+}
+
+.post {
+    border-bottom: none;
+}
+.container-excluir, .container-editar {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #959090;
+    border-radius: 1rem;
+}
+.container-excluir {
+    margin-right: 2rem;
+    
+}
+.container p {
+    color: #FFF;
+}
+.container-editar, 
+.container-excluir {
+    text-align: center;
+    
+}

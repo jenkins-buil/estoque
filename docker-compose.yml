@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql-container
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=mudar123 
+    restart: always
+  api:
+    build: "./back_end_estoque"
+    container_name: backend-container
+    restart: always
+    volumes:
+      - ./back_end_estoque:/home/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  web:
+    build: "./front_end_estoque"
+    container_name: web-container
+    restart: always
+    volumes:
+      - ./front_end_estoque:/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+      - api

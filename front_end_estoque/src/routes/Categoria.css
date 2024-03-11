@@ -1,0 +1,9 @@
+.home .post {
+    border-bottom: 2px solid #777;
+}
+
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
